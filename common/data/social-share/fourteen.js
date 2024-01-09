@@ -1,6 +1,6 @@
 import { socialTwitter } from 'react-icons-kit/ionicons/socialTwitter';
 import { socialFacebook } from 'react-icons-kit/ionicons/socialFacebook';
-import { socialGithub } from 'react-icons-kit/ionicons/socialGithub';
+import { socialInstagram } from 'react-icons-kit/ionicons/socialInstagram';
 
 export const SOCIAL_PROFILES = [
   {
@@ -15,7 +15,7 @@ export const SOCIAL_PROFILES = [
   },
   {
     id: '3',
-    icon: socialGithub,
+    icon: socialInstagram,
     url: '#',
   },
 ];

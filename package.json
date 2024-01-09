@@ -35,5 +35,13 @@
     "eslint": "8.50.0",
     "eslint-config-next": "13.5.3"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moshibbin/diwaanwebsite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moshibbin/diwaanwebsite/issues"
+  },
+  "homepage": "https://github.com/moshibbin/diwaanwebsite#readme"
 }

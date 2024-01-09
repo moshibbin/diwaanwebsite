@@ -45,7 +45,7 @@ import { SOCIAL_PROFILES } from "common/data/social-share/fourteen";
 import { Container, SocialShare } from "../components";
 
 // images
-import LogoTwo from "common/static/images/logoTwo.png";
+import LogoTwo from "common/static/images/logo.png";
 
 // Language translation Config
 const messages = {
@@ -57,7 +57,7 @@ const messages = {
   he: localIl,
 };
 
-const deadline = new Date(Date.parse(new Date()) + 12 * 24 * 60 * 60 * 1000);
+const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
 
 const IndexPage = () => {
   const [state, setState] = useState({
@@ -97,18 +97,17 @@ const IndexPage = () => {
         <MainWrapper>
           <MainContentWrapper>
             <LogoImageContainer>
-              <Link href={"/fourteen"}>
+              <div  style={{display:"flex",justifyContent:"center" , alignItems:"center", }}>
+              <Link href={"/"}>
                 <img
                   src={LogoTwo.src}
                   alt="logo"
                 />
               </Link>
-              <ContactButton
-                type="submit"
-                onClick={toggleHandle}
-              >
-                Contact Us
-              </ContactButton>
+              <h1 style={{color:"#fff",paddingLeft:"20px"}} >Madbacadda Diwaan</h1>
+              </div>
+            
+            
             </LogoImageContainer>
             <Container className="mainContainer">
               <MainContentSection>
@@ -121,13 +120,7 @@ const IndexPage = () => {
                 <NormalClockWrapper>
                   <NormalClock countdown={deadline} />
                 </NormalClockWrapper>
-                <ButtonWrapper>
-                  <Button
-                    type="submit"
-                    title="modalButtonText"
-                    onClick={() => setIsOpen(true)}
-                  />
-                </ButtonWrapper>
+               
               </MainContentSection>
             </Container>
             <FooterSection>
@@ -137,86 +130,9 @@ const IndexPage = () => {
               </p>
             </FooterSection>
           </MainContentWrapper>
-          <SideBar className={state.toggle === true ? "expand" : ""}>
-            <SidebarContent>
-              <SidebarClose
-                type="submit"
-                aria-label="close"
-              >
-                <Icon
-                  icon={x}
-                  size={33}
-                  onClick={toggleHandle}
-                />
-              </SidebarClose>
-
-              <About>
-                <h2>
-                  <FormattedMessage id="aboutTitle" />
-                </h2>
-                <p>
-                  <FormattedMessage id="aboutText" />
-                </p>
-              </About>
-
-              <Contact>
-                <h2>
-                  <FormattedMessage id="contactTitle" />
-                </h2>
-                <ContactForm />
-              </Contact>
-
-              <Info>
-                <InfoItem>
-                  <InfoIcon>
-                    <Icon
-                      icon={location}
-                      size={33}
-                    />
-                  </InfoIcon>
-                  <h4>
-                    <FormattedMessage id="addressTitle" />
-                  </h4>
-                  <p>
-                    <FormattedMessage id="addressDetails" />
-                  </p>
-                </InfoItem>
-
-                <InfoItem>
-                  <InfoIcon>
-                    <Icon
-                      icon={phone}
-                      size={32}
-                    />
-                  </InfoIcon>
-                  <h4>
-                    <FormattedMessage id="phoneTitle" />
-                  </h4>
-                  <p>
-                    <FormattedMessage id="phoneNumbers" />
-                  </p>
-                </InfoItem>
-
-                <InfoItem>
-                  <InfoIcon>
-                    <Icon
-                      icon={home}
-                      size={32}
-                    />
-                  </InfoIcon>
-                  <h4>
-                    <FormattedMessage id="websiteTitle" />
-                  </h4>
-                  <p>
-                    <FormattedMessage id="Websites" />
-                  </p>
-                </InfoItem>
-              </Info>
-              <Overlay className={state.toggle === true ? "expand" : ""} />
-            </SidebarContent>
-          </SideBar>
+         
         </MainWrapper>
-        <LanguageSwitcher languageConfig={languageConfig} />
+      
       </div>
     </LanguageProvider>
   );

@@ -203,7 +203,7 @@ const IndexPage = () => {
               <Overlay className={state.toggle === true ? 'expand' : ''} />
             </SideBar>
           </MainWrapper>
-          <LanguageSwitcher languageConfig={languageConfig} />
+         
         </React.Fragment>
       </LanguageProvider>
     </NoSSR>
