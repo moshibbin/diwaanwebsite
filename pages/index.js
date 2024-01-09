@@ -57,7 +57,7 @@ const messages = {
   he: localIl,
 };
 
-const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+const deadline = new Date(Date.parse(new Date()) + 21 * 24 * 60 * 60 * 1000);
 
 const IndexPage = () => {
   const [state, setState] = useState({
@@ -81,8 +81,8 @@ const IndexPage = () => {
     <LanguageProvider messages={messages}>
       <div>
         <NextSeo
-          title="Coming Soon"
-          description="React Next Coming Soon Template."
+          title="Diiwaan"
+          description="Madbacadda Diiwaan."
         />
         <Modal
           isOpen={modalIsOpen}
