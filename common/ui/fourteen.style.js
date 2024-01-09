@@ -81,7 +81,7 @@ export const MainWrapper = styled.div`
   display: flex;
   max-width: 100%;
   overflow: hidden;
-  background:  #0dc033 ;
+  background:  #0dc033;
   @media (max-width: 1300px) and (min-width: 1200px) {
     background-position: center 120%;
   }

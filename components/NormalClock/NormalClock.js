@@ -150,3 +150,161 @@ class NormalClock extends React.Component {
 }
 
 export default NormalClock;
+
+
+
+
+
+// import React from "react";
+// import { FormattedMessage } from "react-intl";
+// // function component
+// const StaticCard = ({ position, digit }) => {
+//   return (
+//     <div className={position}>
+//       <span>{digit}</span>
+//     </div>
+//   );
+// };
+
+// // function component
+// const NormalUnitContainer = ({ digit, unit = "time", countdown }) => {
+//   // assign digit values
+//   let currentDigit = digit;
+//   let previousDigit;
+//   if (countdown) {
+//     previousDigit = digit + 1;
+
+//     // to prevent a negative value
+//     if (unit !== "Sacadood") {
+//       previousDigit = previousDigit === 60 ? 59 : previousDigit;
+//     } else {
+//       previousDigit = previousDigit === 24 ? 23 : previousDigit;
+//     }
+//   }
+//   // add zero
+//   if (currentDigit < 10) {
+//     currentDigit = `0${currentDigit}`;
+//   }
+//   if (previousDigit < 10) {
+//     previousDigit = `0${previousDigit}`;
+//   }
+
+//   return (
+//     <div className={"NormalUnitContainer"}>
+//       <StaticCard
+//         position={"NormalupperCard"}
+//         digit={currentDigit}
+//       />
+
+//       <div className="digitLabel">
+//         <label>
+//           <FormattedMessage
+//             id={unit}
+//             defaultValue="unit"
+//           />
+//         </label>
+//       </div>
+//     </div>
+//   );
+// };
+
+// function getTimeRemaining(endtime) {
+//   let t = Date.parse(endtime) - Date.parse(new Date());
+//   let Maalmood = Math.floor(t / (1000 * 60 * 60 * 24));
+//   let Sacadood = Math.floor((t / (1000 * 60 * 60)) % 24);
+//   let Daqiiqadood = Math.floor((t / 1000 / 60) % 60);
+//   let Ilbidhiqsi = Math.floor((t / 1000) % 60);
+//   return {
+//     time: t,
+//     Maalmood,
+//     Sacadood,
+//     Daqiiqadood,
+//     Ilbidhiqsi,
+//   };
+// }
+
+// // class component
+// class NormalClock extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       Maalmood: 0,
+//       Sacadood: 0,
+//       Daqiiqadood: 0,
+//       Ilbidhiqsi: 0,
+//     };
+//   }
+
+//   componentDidMount() {
+//     this.timerID = setInterval(() => this.updateTime(), 50);
+//   }
+
+//   componentWillUnmount() {
+//     clearInterval(this.timerID);
+//   }
+
+//   updateTime() {
+//     const { Maalmood, Sacadood, Daqiiqadood, Ilbidhiqsi } = getTimeRemaining(this.props.countdown);
+
+//     if (Maalmood !== this.state.Maalmood) {
+//       this.setState({
+//         Maalmood,
+//       });
+//     }
+
+//     // on hour change, update Sacadood and shuffle state
+//     if (Sacadood !== this.state.Sacadood) {
+//       this.setState({
+//         Sacadood,
+//       });
+//     }
+//     // on minute change, update Daqiiqadood and shuffle state
+//     if (Daqiiqadood !== this.state.Daqiiqadood) {
+//       this.setState({
+//         Daqiiqadood,
+//       });
+//     }
+//     // on second change, update Ilbidhiqsi and shuffle state
+//     if (Ilbidhiqsi !== this.state.Ilbidhiqsi) {
+//       this.setState({
+//         Ilbidhiqsi,
+//       });
+//     }
+//   }
+
+//   render() {
+//     // state object destructuring
+//     const { Maalmood, Sacadood, Daqiiqadood, Ilbidhiqsi } = this.state;
+//     const { countdown, divider } = this.props;
+//     return (
+//       <div className={"NormalClock"}>
+//         <NormalUnitContainer
+//           countdown={countdown}
+//           unit={"Maalmood"} 
+//           digit={Maalmood}
+//         />
+//         {divider ? <span className="dividerColon">:</span> : ""}
+//         <NormalUnitContainer
+//           countdown={countdown}
+//           unit={"Sacadood"}
+//           digit={Sacadood}
+//         />
+//         {divider ? <span className="dividerColon">:</span> : ""}
+//         <NormalUnitContainer
+//           countdown={countdown}
+//           unit={"Daqiiqadood"}
+//           digit={Daqiiqadood}
+//         />
+//         {divider ? <span className="dividerColon">:</span> : ""}
+//         <NormalUnitContainer
+//           countdown={countdown}
+//           unit={"Ilbidhiqsi"}
+//           digit={Ilbidhiqsi}
+//         />
+//       </div>
+//     );
+//   }
+// }
+
+// export default NormalClock;
+

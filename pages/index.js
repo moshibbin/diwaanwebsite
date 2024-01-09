@@ -112,11 +112,12 @@ const IndexPage = () => {
             <Container className="mainContainer">
               <MainContentSection>
                 <h2>
-                  <FormattedMessage id="mainMessage" />
+                  " Waan soo socdaa kow dheh, Waxna waan sidaa laba dheh "
                 </h2>
-                <p>
+                
+                {/* <p>
                   <FormattedMessage id="description" />
-                </p>
+                </p> */}
                 <NormalClockWrapper>
                   <NormalClock countdown={deadline} />
                 </NormalClockWrapper>
