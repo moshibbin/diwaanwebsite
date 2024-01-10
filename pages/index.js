@@ -126,7 +126,7 @@ const IndexPage = () => {
             </Container>
             <FooterSection>
               <SocialShare items={SOCIAL_PROFILES} />
-              {/* comments */}
+         
               <p>
                 <FormattedMessage id="copyrightText" />
               </p>
